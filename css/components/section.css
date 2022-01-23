@@ -1,0 +1,19 @@
+.section {
+  --title-color: #fff;
+  margin: 0 0 45px;
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.section__title {
+  margin: 0;
+  font-size: 20px;
+  color: var(--title-color);
+  font-family: var(--app-font-exo);
+  font-weight: 300;
+}

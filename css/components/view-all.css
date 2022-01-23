@@ -1,0 +1,7 @@
+.view-all-link {
+  text-decoration: none;
+  color: rgb(var(--color-yellow));
+  font-family: var(--app-font-exo);
+  font-weight: 300;
+  font-size: 12px;
+}

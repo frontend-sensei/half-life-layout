@@ -1,0 +1,88 @@
+.game-statistic-section-content {
+  display: flex;
+  overflow-y: auto;
+  padding: 10px 0 10px var(--app-user-info-padding-x);
+  margin: 0 calc(var(--app-user-info-padding-x) * -1);
+}
+
+.game-statistics-card {
+  --progress-color: gray;
+  min-width: 105px;
+  height: 155px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  margin: 0 20px 0 0;
+}
+
+.game-statistics-card__chart {
+  width: 100%;
+}
+
+.animated {
+  animation: dash 5s infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dashoffset: 1570;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+div.gradient {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-image: conic-gradient(from 0deg, #ffffff00 33%, #56d4ff 66%, #fff);
+}
+
+path {
+  stroke-dasharray: 288.5;
+  stroke-dashoffset: -288.5;
+  stroke-linecap: round;
+  transform-origin: 50px 50px;
+  animation: pathStroke 3.75s 0.5s infinite ease-in-out,
+    pathStroke 7.5s 0.5s infinite cubic-bezier(1, 0.5, 0, 0.5);
+}
+
+/* #F4AD58 */
+
+.game-statistic-card--yellow {
+  --progress-color: #e67662;
+  --background-color: rgba(var(--color-yellow), 0.95);
+}
+
+.game-statistic-card--orange {
+  --progress-color: #f0c777;
+  --background-color: rgba(var(--color-orange), 0.95);
+}
+
+.game-statistic-card--blue {
+  --progress-color: #4c9ed7;
+
+  --background-color: rgba(var(--color-blue), 0.95);
+}
+
+.game-statistic-card__title {
+  font-family: var(--app-font-borda);
+  font-weight: 300;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+.chart-number {
+  font-family: var(--app-font-borda);
+  font-size: 14px;
+  font-weight: 700;
+  fill: var(--progress-color);
+}

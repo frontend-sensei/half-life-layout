@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+  <div class="app">
+    <aside class="app-navbar">
+      <button class="app-navbar__logo-btn" id="app_navbar_logo_btn">
+        <img class="app-navbar__logo" src="./img/icons/logo.svg" alt="Half-Life Logo" />
+      </button>
+
+      <section class="app-navbar__content">
+        <nav class="app-navbar-nav">
+          <ul class="app-navbar-list">
+            <li>
+              <a href="#" class="app-navbar-list__link">
+                <span class="app-navbar-list-link__layer-1">
+                  <span class="app-navbar-list-link__layer-2">
+                    <img src="./img/icons/radioactive.svg" alt="" />
+                  </span>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <!-- Current link -->
+          <div class="app-navbar-indicator"></div>
+
+          <a href="#" class="app-navbar__logo-company">
+            <!-- Add img -->
+            <img src="./img/icons/valve_logo.svg" alt="Valve Logo" />
+          </a>
+        </nav>
+      </section>
+    </aside>
+
+    <main class="app-content-wrapper">
+      <header class="app-header">
+        <div class="input-wrapper app-header__search">
+          <input class="input" type="text" placeholder="Search something" />
+          <button class="app-header-search__button">
+            <img src="./img/icons/magnifier.svg" alt="search button" />
+          </button>
+        </div>
+
+        <button class="app-header__notification-button">
+          <img src="./img/icons/bell.svg" alt="notification" />
+        </button>
+
+        <div class="app-header__avatar-button">
+          <button class="app-user__avatar-button" id="user_info_open">user-toggle</button>
+        </div>
+      </header>
+
+      <section class="app-content">
+        <section class="section">
+          <header class="section__header">
+            <h2 class="section__title">Main Characters</h2>
+            <div class="section__interactive-elements">
+              <a href="#" class="view-all-link"> View all </a>
+            </div>
+          </header>
+
+          <div class="section__content main-character-section-content">
+            <article class="character-card" style="background-image: url(./img/card-img-2.jpg)">
+              <div class="character-card__content">
+                <div class="character-card__header">
+                  <div class="character-card-header__col">
+                    <h3 class="character-card__title">subject</h3>
+                    <p class="character-card__subject-name">Alyx Vance</p>
+                  </div>
+
+                  <div class="character-card-header__col">
+                    <h3 class="character-card__title">in division</h3>
+                    <p class="character-card__rate">8.3</p>
+                  </div>
+                </div>
+
+                <h3 class="character-card__title">special perk</h3>
+                <div class="character-card-perk">
+                  <div class="character-card-perk__icon-wrapper">
+                    <img class="character-card-perk__icon" src="./img/icons/lightning.svg" alt="lightning" />
+                  </div>
+                  <p class="character-card-perk__description">Supporting all Resistance member in the eye of the storm
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="character-card" style="background-image: url(./img/card-img-1.jpg)">
+              <div class="character-card__content">
+                <div class="character-card__header">
+                  <div class="character-card-header__col">
+                    <h3 class="character-card__title">subject</h3>
+                    <p class="character-card__subject-name">Alyx Vance</p>
+                  </div>
+
+                  <div class="character-card-header__col">
+                    <h3 class="character-card__title">in division</h3>
+                    <p class="character-card__rate">8.3</p>
+                  </div>
+                </div>
+
+                <h3 class="character-card__title">special perk</h3>
+                <div class="character-card-perk">
+                  <div class="character-card-perk__icon-wrapper">
+                    <img class="character-card-perk__icon" src="./img/icons/lightning.svg" alt="lightning" />
+                  </div>
+                  <p class="character-card-perk__description">Supporting all Resistance member in the eye of the storm
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="character-card" style="background-image: url(./img/card-img-2.jpg)">
+              <div class="character-card__content">
+                <div class="character-card__header">
+                  <div class="character-card-header__col">
+                    <h3 class="character-card__title">subject</h3>
+                    <p class="character-card__subject-name">Alyx Vance</p>
+                  </div>
+
+                  <div class="character-card-header__col">
+                    <h3 class="character-card__title">in division</h3>
+                    <p class="character-card__rate">8.3</p>
+                  </div>
+                </div>
+
+                <h3 class="character-card__title">special perk</h3>
+                <div class="character-card-perk">
+                  <div class="character-card-perk__icon-wrapper">
+                    <img class="character-card-perk__icon" src="./img/icons/lightning.svg" alt="lightning" />
+                  </div>
+                  <p class="character-card-perk__description">Supporting all Resistance member in the eye of the storm
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <header class="section__header">
+            <h2 class="section__title">Resistance Updates</h2>
+            <div class="section__interactive-elements">
+              <a href="#" class="view-all-link"> View all </a>
+            </div>
+          </header>
+
+          <div class="section__content updates-section-content">
+            <article class="update-card update-card--difficult-hard">
+              <div class="update-card-content-wrapper">
+                <div class="update-card__legend">
+                  <div class="update-card__location-img-wrapper">
+                    <img
+                      src="./img/updates/map-1.jpg"
+                      alt="location description"
+                      class="update-card__location-img"
+                    />
+                  </div>
+                  <div class="update-card__info">
+                    <h3 class="update-card__location-name">Nova Prospekt</h3>
+                    <p class="update-card__date">Sunday, 12 November 2004</p>
+                  </div>
+                </div>
+                <p class="update-card__members">20 members</p>
+                <p class="update-card__difficult">Difficult: Hard</p>
+                <p class="update-card__character-name">Antlion Horde</p>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropdown__trigger">
+                  <img src="./img/icons/more.svg" alt="" />
+                </button>
+                <div class="dropdown__list">
+                  <button class="dropdown__button">1</button>
+                  <a href="#" class="dropdown__button">2</a>
+                  <button class="dropdown__button">3</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="update-card update-card--difficult-insane">
+              <div class="update-card-content-wrapper">
+                <div class="update-card__legend">
+                  <div class="update-card__location-img-wrapper">
+                    <img
+                      src="./img/updates/map-2.jpg"
+                      alt="location description"
+                      class="update-card__location-img"
+                    />
+                  </div>
+                  <div class="update-card__info">
+                    <h3 class="update-card__location-name">Black Messa East</h3>
+                    <p class="update-card__date">friday, 06 November 2020</p>
+                  </div>
+                </div>
+                <p class="update-card__members">75 members</p>
+                <p class="update-card__difficult">Difficult: Hard</p>
+                <p class="update-card__character-name">G-Man</p>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown__trigger">
+                  <img src="./img/icons/more.svg" alt="" />
+                </button>
+                <div class="dropdown__list">
+                  <button class="dropdown__button">1</button>
+                  <a href="#" class="dropdown__button">2</a>
+                  <button class="dropdown__button">3</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="update-card update-card--difficult-medium">
+              <div class="update-card-content-wrapper">
+                <div class="update-card__legend">
+                  <div class="update-card__location-img-wrapper">
+                    <img
+                      src="./img/updates/map-3.jpg"
+                      alt="location description"
+                      class="update-card__location-img"
+                    />
+                  </div>
+                  <div class="update-card__info">
+                    <h3 class="update-card__location-name">Project Borealis</h3>
+                    <p class="update-card__date">Monday, 12 March 2021</p>
+                  </div>
+                </div>
+                <p class="update-card__members">10 members</p>
+                <p class="update-card__difficult">Difficult: Hard</p>
+                <p class="update-card__character-name">Allience Hostiles</p>
+              </div>
+              <div class="dropdown">
+                <button class="dropdown__trigger">
+                  <img src="./img/icons/more.svg" alt="" />
+                </button>
+                <div class="dropdown__list">
+                  <button class="dropdown__button">1</button>
+                  <a href="#" class="dropdown__button">2</a>
+                  <button class="dropdown__button">3</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <aside class="app-user-info">
+      <button class="app-user__avatar-button" id="user_info_close">user-toggle</button>
+
+      <section class="section">
+        <header class="section__header">
+          <h2 class="section__title">Lambda Treasures</h2>
+          <div class="section__interactive-elements">
+            <a href="#" class="view-all-link"> View all </a>
+          </div>
+        </header>
+
+        <div class="section__content lambda-treasures-section-content">
+          <div class="loot">
+            <div class="rectangle">
+              <div class="rectangle-center">
+                <div class="rectangle-side rectangle-side-bottom"></div>
+                <div class="rectangle-side rectangle-side-top"></div>
+                <div class="rectangle-side-top-ghost">
+                  <button class="safe-lock-btn safe-lock-circle safe-lock-circle-1">
+                    <div class="safe-lock-layer safe-lock-circle-1-layer-1"></div>
+                    <div class="safe-lock-circle safe-lock-circle-2 safe-lock-full">
+                      <div class="safe-lock-layer safe-lock-circle-2-layer-1"></div>
+                      <div class="safe-lock-layer safe-lock-circle-2-layer-2"></div>
+                      <div class="safe-lock-layer safe-lock-circle-2-layer-3"></div>
+                      <div class="safe-lock-layer safe-lock-circle-2-layer-4"></div>
+
+                      <div class="safe-lock-circle safe-lock-circle-3">
+                        <div class="safe-lock-circle safe-lock-circle-4 safe-lock-full">
+                          <div class="safe-lock-circle safe-lock-circle-5 safe-lock-full">
+                            <img class="safe-lock-layer safe-lock-circle-5-shape"
+                              src="./img/safe-lock-btn/circle-shape-1.svg" alt="#" />
+                            <div class="safe-lock-layer safe-lock-circle-5-layer-1 safe-lock-full"></div>
+                            <div class="safe-lock-layer safe-lock-circle-5-layer-2"></div>
+
+                            <div class="safe-lock-circle safe-lock-circle-6 safe-lock-full">
+                              <div class="safe-lock-layer safe-lock-circle-6-layer-1"></div>
+                              <div class="safe-lock-layer safe-lock-circle-6-layer-2"></div>
+
+                              <div class="safe-lock-circle safe-lock-circle-7 safe-lock-full">
+                                <div class="safe-lock-circle safe-lock-circle-8 safe-lock-full">
+                                  <div class="safe-lock-circle safe-lock-circle-9 safe-lock-full">
+                                    <img class="safe-lock-layer safe-lock-circle-9-shape-1"
+                                      src="./img/safe-lock-btn/circle-shape-2.svg" alt="#" />
+                                    <img class="safe-lock-circle-9-shape-2" src="./img/safe-lock-btn/safe-lock-icon.svg"
+                                      alt="#" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="safe-lock-layer safe-lock-circle-1-layer-2"></div>
+                  </button>
+                </div>
+                <div class="rectangle-side rectangle-side-front"></div>
+                <div class="rectangle-side rectangle-side-back"></div>
+                <div class="rectangle-side rectangle-side-left"></div>
+                <div class="rectangle-side rectangle-side-right"></div>
+                <div class="loot__item"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lambda-treasures-notifications">
+            <div class="lambda-treasures__notification">
+              <img class="lambda-treasures-notification__img" src="./img/avatars/avatar-1.jpg" alt="Eli Vance">
+              <div class="lambda-treasures-notification__content">
+                <div class="lambda-treasures-notification__fullname">
+                  Eli Vance
+                </div>
+                <div class="lambda-treasures-notification__description">
+                  has <span class="lambda-treasures-notification__emphasis">add new event</span> for Alyx Vance.
+                </div>
+                <div class="lambda-treasures-notification__time">
+                  1 hour ago
+                </div>
+              </div>
+            </div>
+            <div class="lambda-treasures__notification">
+              <img class="lambda-treasures-notification__img" src="./img/avatars/avatar-2.jpg" alt="Eli Vance">
+              <div class="lambda-treasures-notification__content">
+                <div class="lambda-treasures-notification__fullname">
+                  G man
+                </div>
+                <div class="lambda-treasures-notification__description">
+                  has <span class="lambda-treasures-notification__emphasis">add new challenge</span> for Gordon Freeman.
+                </div>
+                <div class="lambda-treasures-notification__time">
+                  2 hour ago
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <header class="section__header">
+          <h2 class="section__title">Game Statistics</h2>
+          <div class="section__interactive-elements">
+            <a href="#" class="view-all-link"> View all </a>
+          </div>
+        </header>
+
+        <div class="section__content game-statistic-section-content">
+          <article class="game-statistics-card game-statistic-card--yellow">
+            <div class="section__content">
+              <div class="game-statistic-card">
+                <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
+                  <circle
+                    class="donut-ring"
+                    cx="21"
+                    cy="21"
+                    r="15.91549430918954"
+                    fill="transparent"
+                    stroke="#ff000033"
+                    stroke-width="2"
+                  ></circle>
+                  <circle
+                    class="donut-segment"
+                    cx="21"
+                    cy="21"
+                    r="15.91549430918954"
+                    fill="transparent"
+                    stroke="red"
+                    stroke-width="2"
+                    stroke-dasharray="85 15"
+                    stroke-dashoffset="25"
+                    stroke-linecap="round"
+                  ></circle>
+
+                  <g class="chart-text">
+                    <text x="28%" y="60%" class="chart-number">10%</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <h2 class="game-statistic-card__title">Black Mesa Incident</h2>
+          </article>
+          <article class="game-statistics-card game-statistic-card--orange">
+            <div class="section__content">
+              <div class="game-statistic-card">
+                <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
+                  <circle
+                    class="donut-ring"
+                    cx="21"
+                    cy="21"
+                    r="15.91549430918954"
+                    fill="transparent"
+                    stroke="#ff000033"
+                    stroke-width="2"
+                  ></circle>
+                  <circle
+                    class="donut-segment"
+                    cx="21"
+                    cy="21"
+                    r="15.91549430918954"
+                    fill="transparent"
+                    stroke="red"
+                    stroke-width="2"
+                    stroke-dasharray="85 15"
+                    stroke-dashoffset="25"
+                    stroke-linecap="round"
+                  ></circle>
+
+                  <g class="chart-text">
+                    <text x="28%" y="60%" class="chart-number">10%</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <h2 class="game-statistic-card__title">Black Mesa Incident</h2>
+          </article>
+          <article class="game-statistics-card game-statistic-card--blue">
+            <div class="section__content">
+              <div class="game-statistic-card">
+                <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
+                  <circle
+                    class="donut-ring"
+                    cx="21"
+                    cy="21"
+                    r="15.91549430918954"
+                    fill="transparent"
+                    stroke="#ff000033"
+                    stroke-width="2"
+                  ></circle>
+                  <circle
+                    class="donut-segment"
+                    cx="21"
+                    cy="21"
+                    r="15.91549430918954"
+                    fill="transparent"
+                    stroke="red"
+                    stroke-width="2"
+                    stroke-dasharray="85 15"
+                    stroke-dashoffset="25"
+                    stroke-linecap="round"
+                  ></circle>
+
+                  <g class="chart-text">
+                    <text x="28%" y="60%" class="chart-number">10%</text>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <h2 class="game-statistic-card__title">Black Mesa Incident</h2>
+          </article>
+          </div>
+      </section>
+    </aside>
+  </div>
+
+  <script src="./js/navbar.js"></script>
+  <script src="./js/user-info.js"></script>
+  <script src="./js/safe-lock.js"></script>
+  <script src="./js/dropdown.js"></script>
+</body>
+
+</html>

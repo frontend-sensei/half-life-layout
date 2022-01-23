@@ -1,0 +1,151 @@
+.loot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  min-height: var(--safe-lock-block-size);
+  perspective: 1000px;
+  margin-top: -15px;
+  transition: transform var(--duration) ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loot--shown {
+  transform: scale(1.1);
+}
+
+.rectangle {
+  --height: 160px;
+  --width: 230px;
+  --length: 260px;
+  --radius: 30px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(360deg) rotate(360deg) scale(0.84);
+}
+
+.rectangle-center {
+  position: absolute;
+  width: var(--width);
+  height: var(--length);
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+
+.rectangle-side {
+  position: absolute;
+  background-color: #000000a8;
+  box-shadow: inset 0 0 20px 1px rgb(var(--color-yellow-dark-1));
+  opacity: 0;
+  transition: var(--duration) ease-in-out;
+}
+
+.rectangle-side-bottom {
+  height: var(--length);
+  width: var(--width);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rectangle-side-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--length);
+  width: var(--width);
+  top: 50%;
+  transform-origin: right center;
+  transform: translateY(-50%) translateZ(var(--height));
+  transition: 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.rectangle-side-top-ghost {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--length);
+  width: var(--width);
+  top: 50%;
+  backface-visibility: hidden;
+  transform-origin: right center;
+  transform: translateY(-50%) translateZ(var(--height));
+  transition: 1s ease-in-out;
+}
+
+.rectangle-side-front {
+  width: var(--width);
+  height: var(--height);
+  transform: translateY(-50%) rotateX(90deg) translateY(50%);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.rectangle-side-back {
+  width: var(--width);
+  height: var(--height);
+  transform: translateY(50%) rotateX(90deg) translateY(50%);
+  bottom: 0;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.rectangle-side-left {
+  width: var(--height);
+  height: var(--length);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-50%) rotateY(90deg) translateX(-50%);
+  border-bottom-left-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+}
+
+.rectangle-side-right {
+  width: var(--height);
+  height: var(--length);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(50%) rotateY(90deg) translateX(-50%);
+  border-bottom-left-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+}
+
+.loot__item {
+  pointer-events: none;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 1s ease-in-out;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.loot--shown .rectangle-side-top {
+  border-radius: calc(var(--radius) * 0.5);
+}
+
+.loot--shown .rectangle-side-top,
+.loot--shown .rectangle-side-top-ghost {
+  transform: translateY(-50%) translateZ(var(--height)) rotateY(125deg);
+  transition: 1s ease-in-out 1s;
+}
+
+.loot--shown .rectangle-side {
+  opacity: 1;
+}
+
+.loot--shown .loot__item {
+  pointer-events: all;
+  opacity: 1;
+  transform: scale(1);
+  transition: 1s ease-in-out 1.5s;
+}

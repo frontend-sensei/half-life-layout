@@ -1,0 +1,108 @@
+.app-navbar {
+  position: relative;
+  min-width: var(--app-navbar-width);
+}
+
+.app-navbar__content {
+  padding-top: 130px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(182.73deg, #E67662 -7.54%, #F0C777 37.35%, #F79238 145.21%);
+  transition: var(--layout-transition);
+}
+
+@media (max-width: 992px) {
+  .app-navbar__content {
+    opacity: 0;
+  }
+
+  .app-navbar--active .app-navbar__content {
+    opacity: 1;
+  }
+}
+
+.app-navbar__logo-btn {
+  padding: 0;
+  cursor: pointer;
+  width: var(--app-navbar-logo-btn);
+  position: fixed;
+  top: var(--layout-offset-top);
+  left: calc(
+    var(--app-navbar-nav-width) * 0.5 -
+    var(--app-navbar-logo-btn) * 0.5
+  );
+  z-index: 10;
+  border: none;
+  background-color: transparent;
+  transition: var(--layout-transition);
+  transition-property: left;
+}
+
+.app-navbar__logo {
+  width: 100%;
+}
+
+.app-navbar-nav {
+  padding: 0 0 35px 0;
+  height: 100%;
+  width: var(--app-navbar-nav-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--layout-transition);
+  transition-property: width;
+}
+
+@media (max-width: 992px) {
+  :root {
+    --app-navbar-nav-width: 80px;
+  }
+}
+
+.app-navbar-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.app-navbar-list__link {
+  margin: 0 auto;
+  display: block;
+  width: var(--app-navbar-list-link-size);
+  height: var(--app-navbar-list-link-size);
+  border-radius: 8px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 11px 1px #4444444f;
+  transition: var(--layout-transition);
+  transition-property: width, height;
+}
+
+@media (max-width: 992px) {
+  :root {
+    --app-navbar-list-link-size: 50px;
+  }
+}
+
+.app-navbar-list-link__layer-1 {
+  padding: 2px;
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  background-image: linear-gradient(139.24deg, #FFFFFF 3.57%, #F9E073 14.07%, #EFB470 31.22%, #F9E171 96.43%);
+}
+
+.app-navbar-list-link__layer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 3px;
+  background-image: linear-gradient(135deg, #F3AE62 0%, #F4AF63 41.15%, #F9DE77 81.31%);
+}
+
+.app-navbar__logo-company {
+  text-align: center;
+}

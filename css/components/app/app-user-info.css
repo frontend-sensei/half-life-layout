@@ -1,0 +1,25 @@
+.app-user-info {
+  --app-user-info-padding-x: 45px;
+  padding: 0 var(--app-user-info-padding-x);
+  position: relative;
+  width: var(--app-user-info-width);
+  max-width: var(--app-viewport-width);
+  margin-left: var(--app-user-info-negative-offset);
+  background-color: #1c1c1e;
+  border-top-left-radius: var(--layout-border-radius);
+  border-bottom-left-radius: var(--layout-border-radius);
+  overflow: hidden auto;
+}
+
+@media (max-width: 992px) {
+  .app-user-info {
+    position: fixed;
+    right: calc(var(--app-user-info-width) * -1);
+    height: 100%;
+    transition: var(--layout-transition);
+  }
+
+  .app-user-info--active {
+    right: 0;
+  }
+}

@@ -1,0 +1,30 @@
+:root {
+  --app-font-borda: "Borda";
+  --app-font-exo: "ExoSoft";
+  --app-viewport-width: 100%;
+
+  --layout-border-radius: 35px;
+  --layout-offset-top: 35px;
+  --layout-transition: 0.5s ease-in-out;
+
+  --app-navbar-width: 280px;
+  --app-navbar-list-link-size: 60px;
+  --app-navbar-nav-width: 130px;
+  --app-navbar-logo-btn: 50px;
+  --app-user-info-width: 350px;
+  --app-user-info-negative-offset: -50px;
+
+  --color-black: 28, 28, 30;
+
+  --color-gray-dark-1: 70, 85, 88;
+  --color-gray: 139, 157, 169;
+  --color-gray-light-1: 165, 165, 166;
+
+  --color-yellow-dark-1: 246, 149, 60;
+  --color-yellow: 240, 199, 119;
+
+  --color-orange: 230, 118, 98;
+
+  --color-blue: 133, 194, 215;
+  --color-blue-dark: 76, 158, 187;
+}

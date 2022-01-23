@@ -1,0 +1,114 @@
+.dropdown {
+  position: relative;
+  --trigger-size: 30px;
+}
+
+.dropdown__trigger {
+  padding: 8px;
+  margin-right: 10px;
+  transition: 0.2s ease-in-out;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  width: var(--trigger-size);
+  height: var(--trigger-size);
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown__trigger:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  border: 2px solid rgba(var(--difficult-color), 0.4);
+  box-shadow: inset 0 0 10px 0 rgba(var(--difficult-color), 0.2);
+}
+
+.dropdown__trigger:focus {
+  opacity: 0.4;
+  outline: none;
+  border: 2px solid rgba(var(--difficult-color), 0.4);
+}
+
+.dropdown__list {
+  position: absolute;
+  display: none;
+  width: 100px;
+  top: 100%;
+  right: 0%;
+  z-index: 10;
+  transform: translatey(10px);
+  transition: opacity 0.5s ease-in-out, transform 0.1s 0.1s;
+}
+
+.dropdown__list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(calc(var(--trigger-size) * -0.5), -10px);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-bottom: 10px solid rgba(var(--color-gray-dark-1), 0.3);
+}
+
+.dropdown__trigger--active ~ .dropdown__list {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropdown__button {
+  font-family: var(--app-font-borda);
+  font-size: 16px;
+  width: 100%;
+  background-color: rgba(var(--color-gray-dark-1), 0.3);
+  backdrop-filter: blur(10px);
+  color: rgb(var(--color-gray-light-1));
+  padding: 8px;
+  border: 1px solid transparent;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.dropdown__button:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.dropdown__button:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.dropdown__button[disabled] {
+  pointer-events: none;
+}
+
+.dropdown__button:hover {
+  background-color: rgba(var(--difficult-color), 0.05);
+  border: 1px solid rgba(var(--difficult-color), 0.2);
+  cursor: pointer;
+}
+
+.dropdown__button:focus {
+  background-color: rgba(var(--difficult-color), 0.05);
+  border: 1px solid rgba(var(--difficult-color), 0.2);
+  outline: none;
+}
+
+@media (max-width: 1300px) {
+  .dropdown__trigger {
+    margin: 5px 10px 0 0;
+  }
+
+  .dropdown__list {
+    top: calc(var(--trigger-size) + 5px);
+  }
+}

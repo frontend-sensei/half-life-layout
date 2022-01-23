@@ -1,0 +1,53 @@
+.main-character-section-content {
+  display: flex;
+  overflow-x: auto;
+  margin: 0 -50px;
+  padding: 0 50px 5px 50px;
+}
+
+.updates-section-content {
+}
+
+.lambda-treasures-section-content {
+  --duration: 1s;
+  --safe-lock-button-size: 190px;
+  --safe-lock-block-size: calc(90px + var(--safe-lock-button-size));
+  position: relative;
+  padding-top: var(--safe-lock-block-size);
+}
+
+.lambda-treasures__notification {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.lambda-treasures-notification__img {
+  max-width: 45px;
+  border-radius: 18px;
+  margin-right: 17px;
+}
+
+.lambda-treasures-notification__fullname {
+  font-family: var(--app-font-exo);
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(var(--color-yellow));
+}
+
+.lambda-treasures-notification__description {
+  font-family: var(--app-font-borda);
+  font-size: 14px;
+  color: #fff;
+  margin: 4px 0;
+}
+
+.lambda-treasures-notification__emphasis {
+  color: rgb(var(--color-orange));
+}
+
+.lambda-treasures-notification__time {
+  font-family: var(--app-font-borda);
+  font-size: 14px;
+  color: rgb(var(--color-gray-light-1));
+}
