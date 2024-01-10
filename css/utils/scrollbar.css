@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  --scrollbar-size: 5px;
+  --scrollbar-size: 2px;
   width: var(--scrollbar-size);
   height: var(--scrollbar-size);
 }
